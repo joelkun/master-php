@@ -1,0 +1,6 @@
+/*
+4. SACAR TODOS LOS VENDEDORES CUYA FECHA DE ALTA SEA POSTERIOR A 1 DE JULIO DE 2018
+
+*/
+
+select * from vendedores WHERE fecha >'2018-07-01';
