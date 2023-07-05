@@ -1,0 +1,59 @@
+{% extends 'layouts/master.html.twig' %}
+
+{% block titulo %} Animales {% endblock %}
+
+{% block cabecera %}
+	{{ parent() }}
+	<h1>Animales </h1>
+{% endblock %}
+
+{% block contenido %}
+	{#
+	<h1>{{title}}</h1>
+	<h2>Tu nombre es: {{nombre}}</h2>
+	<h3>Tus apellidos son: {{apellidos}}</h2>
+	#}
+	
+	{# Crear variable#}
+	{% set perro= 'Pastor aleman' %}
+	<h4>{{ perro }}</h4>
+
+	{# Trabajar con arrays#}
+	{{ dump(animales) }}
+	{{ animales[2] }}
+	{{ dump(aves) }}
+	{{ aves.tipo ~ ' - ' ~ aves.raza }}
+
+	{# condicional #}
+	{% if aves.tipo == 'palomo' %}
+		<h1>Cuidado un palomo volador</h1>
+	{% else %}
+		<h1>No hay palomos a la vista</h1>
+	{% endif %}
+
+	{# bucle #}
+	{% if animales|length >= 0 %}
+		<ul>
+			{% for animal in animales %}
+				<li>
+					{{ animal }}
+				</li>
+			{% endfor %}
+		</ul>
+
+	{% endif %}
+
+	{% for i in 0..animales|length %}
+		{{ i }}<br>
+	{% endfor %}
+
+	{% if aves.color ends with 's' %}
+		<h1>Empieza por G</h1>
+	{% endif %}
+
+	<hr/>
+	{{ include('partials/funciones.html.twig', {'nombre':'Jonathan Villon'}) }}
+
+
+
+{% endblock %}

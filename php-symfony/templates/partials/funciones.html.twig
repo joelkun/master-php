@@ -1,0 +1,20 @@
+<h1>Funciones</h1>
+{{ nombre }}
+	{#dunciones predefinidas#}
+	{{ min([9,11,6,99,2]) }}<br/>
+	{{ max([9,11,6,99,2]) }}<br/>
+	{{ random(animales) }}<br/>
+
+	{% for i in range(0, 100, 5) %}
+		{{ i }} <br/>
+	{% endfor %}
+
+	<h1>Filtros</h1>
+	{{ animales|length }}
+	{%  set email = '        email@email.com       ' %}
+	{{  dump(email|trim|upper)}}
+
+	<h1>Extensiones personalizadas</h1>
+
+	{{ multiplicar(5)|raw }}
+	{{ 12|multiplicar|raw }}
