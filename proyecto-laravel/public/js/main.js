@@ -1,4 +1,5 @@
 var url = 'http://proyecto-laravel.com.devel';
+// var url = windows.location.origin;
 window.addEventListener("load", function(){
 	
 	//$('.btn-like').css('cursor','pointer');
