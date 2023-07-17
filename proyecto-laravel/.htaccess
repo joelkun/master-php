@@ -1,0 +1,6 @@
+
+SetEnv ENVIROMENT produccion
+
+RewriteRule ^(.*)$ public/$1 [L]
+
+
